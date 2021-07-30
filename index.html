@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>The CI/CD Github Actions Workshop</title>
+
+		<meta name="description" content="A CI/CD Healthcare Workshop">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" alt="actions.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					<h3>CI/CD Github Actions Workshop</h3>
+				</section>
+
+				<section>
+					<section id="fragments" class="present" style="top: 142px; display: block;">
+						<h2>Pre-requisite:</h2>
+	
+						<div class="fragment" data-fragment-index="0">Clone Repository
+							<a href="https://github.com/healthcarecom/healthcare-gitub-actions-workshop" target="blank">[healthcare-gitub-actions-workshop]</a>
+							<pre data-id="code-animation">
+								<code class="bash" data-trim data-line-numbers>
+									$ git clone git@github.com:healthcarecom/healthcare-gitub-actions-workshop.git
+								</code>
+							</pre>
+	
+						</div>
+						<div class="fragment" data-fragment-index="1">Create a new branch
+							<pre data-id="code-animation">
+								<code class="bash" data-trim data-line-numbers>
+									$ git checkout -b *apinzon*
+								</code>
+							</pre>
+
+
+	
+						</div>
+						<div class="fragment" data-fragment-index="2">
+							<p style="font-size: 12px;">Follow this format to name your new branch, Use the first character of your first name followed by your complete last name example: to create a new branch for user Alejandro pinzon, it would be apinzon, add it to the word cicd.</p>
+						</div>
+				
+					</section>
+					
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<img style="width: 150px" src="https://res.cloudinary.com/practicaldev/image/fetch/s--2mFgk66y--/c_limit,f_auto,fl_progressive,q_80,w_375/https://dev-to-uploads.s3.amazonaws.com/uploads/badge/badge_image/78/github-actions-runner-up-badge.png" alt="">
+					<h3>Create Your First Github Actions Workflow</h3>
+				</section>
+
+				<section>
+					<h3>Create a Workflow File</h3>
+					<ol>
+						<li>As a part of this branch, create a workflows directory nested inside the .github directory.</li>
+						<li>In the new .github/workflows/ directory, create a file titled main.yml</li>
+					</ol>
+
+
+				</section>
+
+				<section >
+					<p>Add the following content to the main.yml file</p>
+					<pre data-id="code-animation">
+						<code class="ymml" data-trim data-line-numbers>
+							name: My First CI/CD Pipeline with Github Actions
+							on:
+							push:
+								branches: [cicd-apinzon]
+						</code>
+					</pre>
+				</section>
+
+				<section data-auto-animate>
+					<h2 data-id="code-title">Pretty Code</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						import React, { useState } from 'react';
+
+						function Example() {
+						  const [count, setCount] = useState(0);
+
+						  return (
+						    ...
+						  );
+						}
+					</code></pre>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			});
+
+		</script>
+
+	</body>
+</html>
